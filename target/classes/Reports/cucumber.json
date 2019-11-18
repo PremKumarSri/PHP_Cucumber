@@ -1,0 +1,98 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2011100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.beforeHooks(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "User checks if he is able to launch the login page",
+        "description": "",
+        "id": "this-feature-file-has-validations-related-to-login-page-like;user-checks-if-he-is-able-to-launch-the-login-page",
+        "after": [
+          {
+            "result": {
+              "duration": 382600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.afterHooks(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21088260400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "URL is launched in the browser",
+            "match": {
+              "location": "PHP_LoginValidations_PageNavigations.url_is_launched_in_the_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5087049200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User clicks on Login from the menu options",
+            "match": {
+              "location": "PHP_LoginValidations_PageNavigations.user_clicks_on_Login_from_the_menu_options()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2060183700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user checks if the page login page is launched properly",
+            "match": {
+              "location": "PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LoginPageValidation"
+          },
+          {
+            "name": "@TC1"
+          }
+        ]
+      }
+    ],
+    "name": "This feature file has validations related to login page like",
+    "description": "checking user ID, password field and other validations.",
+    "id": "this-feature-file-has-validations-related-to-login-page-like",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/php/feature/PHP_Login.feature",
+    "tags": [
+      {
+        "name": "@LoginPageValidation",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
