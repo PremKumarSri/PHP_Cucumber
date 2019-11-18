@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="28.48118">
-<testcase classname="This feature file has validations related to login page like" name="User checks if he is able to launch the login page" time="28.48118">
-<system-out><![CDATA[Given URL is launched in the browser........................................passed
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="32.553544">
+<testcase classname="This feature file has validations related to login page like" name="User checks if he is able to launch the login page" time="32.553544">
+<failure message="org.junit.ComparisonFailure: expected:&lt;L[OGOUT]&gt; but was:&lt;L[ogin]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at com.php.stepdefinition.PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly(PHP_LoginValidations_PageNavigations.java:76)&#13;&#10;&#9;at ✽.user checks if the page login page is launched properly(src/test/java/com/php/feature/PHP_Login.feature:9)&#13;&#10;"><![CDATA[Given URL is launched in the browser........................................passed
 When User clicks on Login from the menu options.............................passed
-Then user checks if the page login page is launched properly................passed
-]]></system-out>
+Then user checks if the page login page is launched properly................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<L[OGOUT]> but was:<L[ogin]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.php.stepdefinition.PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly(PHP_LoginValidations_PageNavigations.java:76)
+	at ✽.user checks if the page login page is launched properly(src/test/java/com/php/feature/PHP_Login.feature:9)
+]]></failure>
 </testcase>
 </testsuite>

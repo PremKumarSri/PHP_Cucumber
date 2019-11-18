@@ -36,6 +36,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -45,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Nov 18, 2019 07:38:58 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Nov 18, 2019 08:53:19 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -61,6 +62,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -114,10 +116,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -128,10 +130,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -142,10 +144,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='80%'><span class='strong'>4</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -163,11 +165,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>This feature file has validations related to login page like</span>
-						<span class='test-time'>Nov 18, 2019 07:38:58 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Nov 18, 2019 08:53:19 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -177,14 +179,14 @@
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='test-desc'>checking user ID, password field and other validations.</div>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
     <div class='category-list'>
         <span class='category label'>@LoginPageValidation</span>
         <span class='category label'>@TC1</span>
     </div>
-    <span class='duration right label'>0h 0m 28s+255ms</span>
+    <span class='duration right label'>0h 0m 32s+423ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: User checks if he is able to launch the login page</div>
+        <div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: User checks if he is able to launch the login page</div>
     </div>
     <ul class='steps'>
         <li test-id='3' class='node asterisk pass' status='pass'>
@@ -199,9 +201,14 @@
             <div class="step-name" title="PHP_LoginValidations_PageNavigations.user_clicks_on_Login_from_the_menu_options()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User clicks on Login from the menu options</div>
                 <div class="node-step"></div>
         </li>
-        <li test-id='6' class='node then pass' status='pass'>
-            <div class="step-name" title="PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user checks if the page login page is launched properly</div>
-                <div class="node-step"></div>
+        <li test-id='6' class='node then fail' status='fail'>
+            <div class="step-name" title="PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then user checks if the page login page is launched properly</div>
+                <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<L[OGOUT]> but was:<L[ogin]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.php.stepdefinition.PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly(PHP_LoginValidations_PageNavigations.java:76)
+	at ?.user checks if the page login page is launched properly(src/test/java/com/php/feature/PHP_Login.feature:9)
+</textarea>
         </li>
         <li test-id='7' class='node asterisk pass' status='pass'>
             <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Hook.afterHooks(Scenario)</div>
@@ -253,13 +260,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@LoginPageValidation</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -273,14 +280,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 18, 2019 07:38:58 AM</td>
+										<td>Nov 18, 2019 08:53:19 AM</td>
 										<td class='linked' test-id='1'>This feature file has validations related to login page like</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Nov 18, 2019 07:38:58 AM</td>
+										<td>Nov 18, 2019 08:53:19 AM</td>
 										<td class='linked' test-id='2'>This feature file has validations related to login page like.User checks if he is able to launch the login page</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -291,13 +298,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@TC1</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -311,9 +318,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 18, 2019 07:38:58 AM</td>
+										<td>Nov 18, 2019 08:53:19 AM</td>
 										<td class='linked' test-id='2'>This feature file has validations related to login page like.User checks if he is able to launch the login page</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -329,7 +336,67 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.junit.ComparisonFailure</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 18, 2019 08:53:49 AM</td>
+										<td class='linked' test-id='6'>This feature file has validations related to login page like.User checks if he is able to launch the login page.Then user checks if the page login page is launched properly</td>
+										<td>
+											<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<L[OGOUT]> but was:<L[ogin]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.php.stepdefinition.PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly(PHP_LoginValidations_PageNavigations.java:76)
+	at ?.user checks if the page login page is launched properly(src/test/java/com/php/feature/PHP_Login.feature:9)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -355,19 +422,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 18, 2019 07:38:58 AM</div>
+					<div class='panel-lead'>Nov 18, 2019 08:53:19 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 18, 2019 07:39:26 AM</div>
+			 		<div class='panel-lead'>Nov 18, 2019 08:53:52 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 28s+671ms</div>
+					<div class='panel-lead'>0h 0m 32s+802ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -384,20 +451,20 @@
 						</tr>
 						<tr>
 							<td>@LoginPageValidation</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@TC1</td>
+							<td>0</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -412,38 +479,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 1,
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				grandChildCount: 5,
-				passGrandChild: 5,
-				failGrandChild: 0,
+				passGrandChild: 4,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 1,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "This feature file has validations related to login page like":28.255
+			        "This feature file has validations related to login page like":32.423
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

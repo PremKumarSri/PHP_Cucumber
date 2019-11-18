@@ -1,5 +1,6 @@
 package com.php.stepdefinition;
 
+import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -49,7 +50,7 @@ public class PHP_LoginValidations_PageNavigations extends BaseClass {
 			elementClick(po.getLo().getMyAccount());
 			Thread.sleep(2000);
 			elementClick(po.getLo().getLoginMenuOption());
-
+			takeScreenShotasbyte();
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new Exception();
@@ -72,10 +73,7 @@ public class PHP_LoginValidations_PageNavigations extends BaseClass {
 		try {
 			Thread.sleep(2000);
 			String text = getElementText(po.getLo().getLoginPageText());
-			if (text.contains("LOGIN")) {
-				System.out.println("Login page is launched successfully");
-				takeScreenShotasbyte();
-			}
+			Assert.assertEquals("LOGOUT", text);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new Exception();

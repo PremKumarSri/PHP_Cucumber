@@ -42,6 +42,7 @@ formatter.step({
 formatter.match({
   "location": "PHP_LoginValidations_PageNavigations.user_clicks_on_Login_from_the_menu_options()"
 });
+formatter.embedding("image/png", "embedded0.png");
 formatter.result({
   "status": "passed"
 });
@@ -53,8 +54,10 @@ formatter.match({
   "location": "PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.junit.ComparisonFailure: expected:\u003cL[OGOUT]\u003e but was:\u003cL[ogin]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.php.stepdefinition.PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly(PHP_LoginValidations_PageNavigations.java:76)\r\n\tat ✽.user checks if the page login page is launched properly(src/test/java/com/php/feature/PHP_Login.feature:9)\r\n",
+  "status": "failed"
 });
+formatter.embedding("image/png", "embedded1.png");
 formatter.after({
   "status": "passed"
 });

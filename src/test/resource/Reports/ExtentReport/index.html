@@ -55,7 +55,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Nov 18, 2019 07:38:58 AM</span>
+                    <span class="badge badge-primary">Nov 18, 2019 08:53:19 AM</span>
                 </a>
             </li>
         </ul>
@@ -77,6 +77,14 @@
             <i class="fa fa-tag"></i>
           </span>
           <span class="title">Tags</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
+          <span class="icon-holder">
+            <i class="fa fa-bug"></i>
+          </span>
+          <span class="title">Exception</span>
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -109,7 +117,7 @@
                                         </a>
                                         <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
                                             <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
-	                                        
+	                                        <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
 	                                        
 	                                        
 	                                        
@@ -131,28 +139,28 @@
                             </div>
                             <div class="test-list-wrapper scrollable">
                                 <ul class="test-list-item">
-                                    <li class="test-item"  status="pass" test-id="1"
+                                    <li class="test-item"  status="fail" test-id="1"
                                             author=""
                                             tag="@LoginPageValidation"
                                             device="">
-                                        <div class="status-avatar pass-bg">
-                                            <i class="fa fa-check text-white"></i>
+                                        <div class="status-avatar fail-bg">
+                                            <i class="fa fa-times text-white"></i>
                                         </div>
                                         <div class="open-test">
                                             <div class="test-detail"> 
                                                 <p class="name">This feature file has validations related to login page like</p> 
-                                                <p class="duration text-sm">0h 0m 28s+255ms</p> 
-                                                <span class="datetime">07:38:58 AM</span>
+                                                <p class="duration text-sm">0h 0m 32s+423ms</p> 
+                                                <span class="datetime">08:53:19 AM</span>
                                             </div>
                                         </div>
                                         <div class="test-contents d-none">
                                             <div class="detail-head">
                                                 <div class="p-v-10 d-inline-block"> 
                                                     <div class="info">
-                                                        <h5 class="test-status text-pass">This feature file has validations related to login page like</h5>
-                                                        <span class='badge badge-success'>11.18.2019 07:38:58</span>
-                                                        <span class='badge badge-danger'>11.18.2019 07:39:26</span>
-                                                        <span class='badge badge-default'>0h 0m 28s+255ms</span>
+                                                        <h5 class="test-status text-fail">This feature file has validations related to login page like</h5>
+                                                        <span class='badge badge-success'>11.18.2019 08:53:19</span>
+                                                        <span class='badge badge-danger'>11.18.2019 08:53:52</span>
+                                                        <span class='badge badge-default'>0h 0m 32s+423ms</span>
                                                     </div>
                                                     <div class="m-t-15">
 			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @LoginPageValidation</span>
@@ -168,8 +176,8 @@
 		<div class="card-header" role="tab">
 			<h5 class="card-title pl-3">
 				<div class="node">User checks if he is able to launch the login page</div>
-				<div class="status-avatar float-left pass-bg">
-					<i class="fa fa-check text-white"></i>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
 				</div>
 			</h5>
 		</div>
@@ -196,13 +204,19 @@
 								<span>When User clicks on Login from the menu options</span>
 							</div>
 				<div class="details"></div>
+				<span class="badge badge-primary"><img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\DEMMO\PHP_Travels\src\test\resource\Reports\ExtentReport\Screenshots\embedded1.png' src='D:\DEMMO\PHP_Travels\src\test\resource\Reports\ExtentReport\Screenshots\embedded1.png' data-src='D:\DEMMO\PHP_Travels\src\test\resource\Reports\ExtentReport\Screenshots\embedded1.png'></span>
 							<div class="d-flex align-items-center justify-content-start then" title="PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+								<span class="alert-icon fail-bg">
+									<i class="fa fa-times text-white"></i>
 								</span>
 								<span>Then user checks if the page login page is launched properly</span>
 							</div>
-				<div class="details"></div>
+				<textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<L[OGOUT]> but was:<L[ogin]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.php.stepdefinition.PHP_LoginValidations_PageNavigations.user_checks_if_the_page_login_page_is_launched_properly(PHP_LoginValidations_PageNavigations.java:76)
+	at ?.user checks if the page login page is launched properly(src/test/java/com/php/feature/PHP_Login.feature:9)
+</textarea>
 							<div class="d-flex align-items-center justify-content-start asterisk" title="">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
@@ -210,6 +224,7 @@
 								<span>Hook.afterHooks(Scenario)</span>
 							</div>
 				<div class="details"></div>
+				<span class="badge badge-primary"><img class='r-img' onerror='this.style.display="none"' data-featherlight='D:\DEMMO\PHP_Travels\src\test\resource\Reports\ExtentReport\Screenshots\embedded2.png' src='D:\DEMMO\PHP_Travels\src\test\resource\Reports\ExtentReport\Screenshots\embedded2.png' data-src='D:\DEMMO\PHP_Travels\src\test\resource\Reports\ExtentReport\Screenshots\embedded2.png'></span>
 					</div>
 				</div>
 	</div>
