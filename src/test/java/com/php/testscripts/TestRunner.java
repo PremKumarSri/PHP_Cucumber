@@ -38,9 +38,6 @@ public class TestRunner {
 	public static void tearDown() throws Exception {
 		driver.quit();
 		System.out.println("Test Execution Completed");
-		Thread.sleep(3000);
-		JVM_Report.generateCucumberReport(
-				System.getProperty("user.dir") + "\\src\\test\\resource\\Reports\\cucumber.json");
 
 	}
 
