@@ -26,10 +26,9 @@ public class TestRunner {
 	public static void setup() throws Exception {
 
 
-		System.setProperty("screenshot.dir",System.getProperty("user.dir") + "\\src\\test\\resource\\Reports\\ExtentReport\\Screenshots\\");
-		System.setProperty("extent.reporter.html.start", "true");
+	
+	
 		System.setProperty("extent.reporter.spark.start", "true");
-		System.setProperty("extent.reporter.html.out", System.getProperty("user.dir") + "\\src\\test\\resource\\Reports\\ExtentReport\\report.html");
 		System.setProperty("extent.reporter.spark.out", System.getProperty("user.dir") + "\\src\\test\\resource\\Reports\\ExtentReport\\");
 
 		driver = BaseClass.browser_LaunchIgnoreCase(FileReaderManager.getInstance().getConfigReader().getBrowserName());
